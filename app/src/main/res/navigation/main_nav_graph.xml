@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/main_nav_graph"
+
+    app:startDestination="@+id/main_fragment">
+
+    <fragment
+        android:id="@+id/main_fragment"
+
+        android:name="com.example.recipes.fragment.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_main_fragment_to_add_recipe_fragment"
+            app:destination="@id/add_recipe_fragment"
+            app:popUpTo="@id/add_recipe_fragment" />
+        <action
+            android:id="@+id/action_main_fragment_to_recipe_details_fragment"
+            app:destination="@id/recipe_details_fragment"
+            app:popUpTo="@id/recipe_details_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_recipe_fragment"
+
+        android:name="com.example.recipes.fragment.AddRecipeFragment"
+        android:label="add_recipe_fragment"
+        tools:layout="@layout/add_recipe_fragment" >
+        <action
+            android:id="@+id/action_add_recipe_fragment_to_main_fragment"
+            app:destination="@id/main_fragment"
+            app:popUpTo="@id/main_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipe_details_fragment"
+
+        android:name="com.example.recipes.fragment.RecipeDetailsFragment"
+        android:label="recipe_details_fragment"
+        tools:layout="@layout/recipe_details_fragment" >
+        <action
+            android:id="@+id/action_recipe_details_fragment_to_main_fragment"
+            app:destination="@id/main_fragment"
+            app:popUpTo="@id/main_fragment" />
+        <argument
+            android:name="recipe"
+            app:argType="com.example.recipes.repo.local.Recipe" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Recipes</string>
+    <string name="ADD">ADD</string>
+    <string name="NAME">NAME</string>
+    <string name="DESCRIPTION">DESCRIPTION</string>
+    <string name="DELETE">DELETE</string>
+    <string name="Name">Name</string>
+    <string name="Description">Description</string>
+    <string name="Body">Body</string>
+    <string name="HOME">HOME</string>
+    <string name="SUBMIT">SUBMIT</string>
+    <string name="DETAIL">DETAIL</string>
+</resources>
